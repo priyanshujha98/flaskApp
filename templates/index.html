@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+
+
+
+{% block title %} Home {% endblock %}
+
+
+
+
+{% block body %}
+<table>
+    <thead>
+    <tr>
+        <th>NAME</th>
+        <th>Price</th>
+        <th>Date & Time</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in value %}
+    <tr>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
